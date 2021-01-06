@@ -89,10 +89,8 @@ int main() {
 
   // ログを出力
   std::cout << "<costs>" << std::endl;
-  std::cout << TASK_A_COST << ", "
-            << TASK_B_COST << ", "
-            << TASK_C_COST << ", "
-            << TASK_D_COST << std::endl;
+  std::cout << TASK_A_COST << ", " << TASK_B_COST << ", " << TASK_C_COST << ", " << TASK_D_COST
+            << std::endl;
   std::cout << "</costs>" << std::endl;
 
   std::cout << "<th1>" << std::endl;

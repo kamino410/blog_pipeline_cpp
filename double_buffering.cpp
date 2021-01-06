@@ -33,8 +33,10 @@ public:
     }
   }
   void unlock_write() {
-    if (state) mutex1.unlock();
-    else mutex2.unlock();
+    if (state)
+      mutex1.unlock();
+    else
+      mutex2.unlock();
   }
   int lock_read() {
     if (state) {
@@ -46,8 +48,10 @@ public:
     }
   }
   void unlock_read() {
-    if (state) mutex2.unlock();
-    else mutex1.unlock();
+    if (state)
+      mutex2.unlock();
+    else
+      mutex1.unlock();
   }
   void swap() {
     // 両方のmutexが開放されるのを待ってからswap
@@ -131,10 +135,8 @@ int main() {
 
   // ログを出力
   std::cout << "<costs>" << std::endl;
-  std::cout << TASK_A_COST << ", "
-            << TASK_B_COST << ", "
-            << TASK_C_COST << ", "
-            << TASK_D_COST << std::endl;
+  std::cout << TASK_A_COST << ", " << TASK_B_COST << ", " << TASK_C_COST << ", " << TASK_D_COST
+            << std::endl;
   std::cout << "</costs>" << std::endl;
 
   std::cout << "<th1>" << std::endl;

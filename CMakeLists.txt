@@ -19,5 +19,5 @@ add_executable(double_buffering double_buffering.cpp)
 target_link_libraries(double_buffering PRIVATE Threads::Threads)
 
 add_executable(thread_pool thread_pool.cpp)
-target_link_libraries(thread_pool PRIVATE Threads::Threads)
+target_link_libraries(thread_pool PRIVATE Threads::Threads pthread)
 
