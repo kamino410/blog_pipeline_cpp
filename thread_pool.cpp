@@ -82,7 +82,7 @@ int main() {
   std::vector<std::thread> thread2s;
   // スレッド2を2つ走らせる
   for (size_t th_id = 0; th_id < 2; th_id++) {
-    thread2s.push_back(
+    thread2s.emplace_back(
         std::thread([th_id, &log_thread2s, &flag_exit, &buffers_1to2_used, &buffers_1to2_free,
                      &mutex_buffers_1to2_used, &mutex_buffers_1to2_free, &condition_1to2] {
           size_t log_id = 1;
